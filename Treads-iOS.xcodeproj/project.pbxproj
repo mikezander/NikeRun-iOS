@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C421ABE01FE18DE8003E4FCF /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421ABDF1FE18DE8003E4FCF /* CurrentRunVC.swift */; };
 		C430BAE91FE0FE47003ECDA2 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430BAE81FE0FE47003ECDA2 /* LocationVC.swift */; };
 		C4411FDF1FE064A800246FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4411FDE1FE064A800246FD6 /* AppDelegate.swift */; };
 		C4411FE11FE064A800246FD6 /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4411FE01FE064A800246FD6 /* BeginRunVC.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C421ABDF1FE18DE8003E4FCF /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		C430BAE81FE0FE47003ECDA2 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		C4411FDB1FE064A800246FD6 /* Treads-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treads-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4411FDE1FE064A800246FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				C430BAE81FE0FE47003ECDA2 /* LocationVC.swift */,
 				C4411FE01FE064A800246FD6 /* BeginRunVC.swift */,
 				C4411FE21FE064A800246FD6 /* RunLogVC.swift */,
+				C421ABDF1FE18DE8003E4FCF /* CurrentRunVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C421ABE01FE18DE8003E4FCF /* CurrentRunVC.swift in Sources */,
 				C4411FE31FE064A800246FD6 /* RunLogVC.swift in Sources */,
 				C4411FDF1FE064A800246FD6 /* AppDelegate.swift in Sources */,
 				C430BAE91FE0FE47003ECDA2 /* LocationVC.swift in Sources */,
