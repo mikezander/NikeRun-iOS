@@ -44,10 +44,21 @@ class CurrentRunVC: LocationVC {
     func startRun() {
         manager?.startUpdatingLocation()
         startTimer()
+        pauseBtn.setImage(#imageLiteral(resourceName: "pauseButton"), for: .normal)
     }
     
     func endRun() {
         manager?.stopUpdatingLocation()
+        // Add object to realm
+    }
+    
+    func pauseRun() {
+        startLocation = nil
+        lastLocation = nil
+        timer.invalidate()
+        manager?.stopUpdatingLocation()
+        pauseBtn.setImage(#imageLiteral(resourceName: "resumeButton"), for: .normal)
+        
     }
     
     func startTimer() {
@@ -66,6 +77,11 @@ class CurrentRunVC: LocationVC {
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
+        if timer.isValid {
+            pauseRun()
+        } else {
+            startRun()
+        }
         
     }
     
@@ -81,7 +97,7 @@ class CurrentRunVC: LocationVC {
                     sliderView.center.x = sliderView.center.x + translation.x
                 } else if sliderView.center.x >= swipeBGImageView.center.x + maxAdjust {
                     sliderView.center.x = swipeBGImageView.center.x + maxAdjust
-                    // End Run has been requested
+                    endRun()
                     dismiss(animated: true, completion: nil)
                 } else {
                     sliderView.center.x = swipeBGImageView.center.x - minAdjust
