@@ -10,6 +10,7 @@
 		C421ABE01FE18DE8003E4FCF /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421ABDF1FE18DE8003E4FCF /* CurrentRunVC.swift */; };
 		C42D8DBE1FE44E97008407D0 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D8DBD1FE44E97008407D0 /* Run.swift */; };
 		C42D8DC01FE45735008407D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D8DBF1FE45735008407D0 /* Constants.swift */; };
+		C42D8DC21FE45CAE008407D0 /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D8DC11FE45CAE008407D0 /* RunLogCell.swift */; };
 		C430BAE91FE0FE47003ECDA2 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430BAE81FE0FE47003ECDA2 /* LocationVC.swift */; };
 		C4411FDF1FE064A800246FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4411FDE1FE064A800246FD6 /* AppDelegate.swift */; };
 		C4411FE11FE064A800246FD6 /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4411FE01FE064A800246FD6 /* BeginRunVC.swift */; };
@@ -44,6 +45,7 @@
 		C421ABDF1FE18DE8003E4FCF /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		C42D8DBD1FE44E97008407D0 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		C42D8DBF1FE45735008407D0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C42D8DC11FE45CAE008407D0 /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
 		C430BAE81FE0FE47003ECDA2 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		C4411FDB1FE064A800246FD6 /* Treads-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treads-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4411FDE1FE064A800246FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		C4411FF61FE0676800246FD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C42D8DC11FE45CAE008407D0 /* RunLogCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				C4411FDF1FE064A800246FD6 /* AppDelegate.swift in Sources */,
 				C430BAE91FE0FE47003ECDA2 /* LocationVC.swift in Sources */,
 				C42D8DBE1FE44E97008407D0 /* Run.swift in Sources */,
+				C42D8DC21FE45CAE008407D0 /* RunLogCell.swift in Sources */,
 				C4411FE11FE064A800246FD6 /* BeginRunVC.swift in Sources */,
 				C42D8DC01FE45735008407D0 /* Constants.swift in Sources */,
 			);
