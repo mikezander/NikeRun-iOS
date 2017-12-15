@@ -308,15 +308,25 @@
                                                     <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1c-Oe-bWN">
+                                                    <rect key="frame" x="0.0" y="78" width="375" height="2"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="c57-Ls-L4t"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="WWC-YD-ZDK" firstAttribute="centerY" secondItem="4Wv-Hs-MxP" secondAttribute="centerY" id="Mzm-K7-bzW"/>
                                                 <constraint firstItem="dTs-k6-D1z" firstAttribute="centerY" secondItem="4Wv-Hs-MxP" secondAttribute="centerY" id="WNH-ab-fIB"/>
                                                 <constraint firstItem="WWC-YD-ZDK" firstAttribute="leading" secondItem="4Wv-Hs-MxP" secondAttribute="leading" constant="8" id="XEY-Sk-5s7"/>
+                                                <constraint firstAttribute="trailing" secondItem="O1c-Oe-bWN" secondAttribute="trailing" id="Zoq-N5-6ed"/>
                                                 <constraint firstItem="FCj-Qv-ngd" firstAttribute="leading" secondItem="4Wv-Hs-MxP" secondAttribute="leading" id="ahn-tY-EBm"/>
+                                                <constraint firstItem="O1c-Oe-bWN" firstAttribute="leading" secondItem="4Wv-Hs-MxP" secondAttribute="leading" id="dZu-qR-dDV"/>
                                                 <constraint firstAttribute="trailing" secondItem="FCj-Qv-ngd" secondAttribute="trailing" id="eRn-q2-i9h"/>
                                                 <constraint firstItem="FCj-Qv-ngd" firstAttribute="top" secondItem="4Wv-Hs-MxP" secondAttribute="top" id="ejM-tc-Kgg"/>
+                                                <constraint firstAttribute="bottom" secondItem="O1c-Oe-bWN" secondAttribute="bottom" id="hQd-i5-A2a"/>
                                                 <constraint firstItem="gSe-Dp-8k8" firstAttribute="centerX" secondItem="4Wv-Hs-MxP" secondAttribute="centerX" id="mV8-DQ-684"/>
                                                 <constraint firstAttribute="bottom" secondItem="FCj-Qv-ngd" secondAttribute="bottom" id="vh2-bi-wrq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dTs-k6-D1z" secondAttribute="trailing" id="xIC-jf-2xS"/>
@@ -332,6 +342,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="cxd-g6-PEB"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="POv-ja-1qi"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -350,6 +364,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Log" image="tabbar-myLogIconGray" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="E5k-gL-MeE" id="yur-5P-pLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
