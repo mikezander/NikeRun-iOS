@@ -55,6 +55,7 @@ class Run: Object {
         do {
             let realm = try Realm()
             var runs = realm.objects(Run.self)
+            runs = runs.sorted(byKeyPath: "date", ascending: false) //newest on top
             return runs
         }catch {
             return nil
