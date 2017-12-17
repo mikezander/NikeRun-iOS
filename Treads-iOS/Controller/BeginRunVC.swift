@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class BeginRunVC: LocationVC {
 
@@ -51,6 +52,7 @@ class BeginRunVC: LocationVC {
             hideRunData(hide: false)
         } else {
             hideRunData(hide: true)
+            centerMapOnUserLocation()
         }
     }
     
@@ -66,9 +68,35 @@ class BeginRunVC: LocationVC {
             coordinate.append(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
         }
         
+        mapView.userTrackingMode = .none
+        mapView.setRegion(centerMapOnPreviousRoute(locations: lastRun.locations), animated: true)
+        
         return MKPolyline(coordinates: coordinate, count: lastRun.locations.count)
     }
 
+    func centerMapOnUserLocation() {
+        mapView.userTrackingMode = .follow
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 1000, 1000)
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+    }
+    
+    func centerMapOnPreviousRoute(locations: List<Location>) -> MKCoordinateRegion {
+        guard let initialLocation = locations.first else { return MKCoordinateRegion() }
+        var minLat = initialLocation.latitude
+        var minLng = initialLocation.longitude
+        var maxLat = minLat
+        var maxLng = minLng
+        
+        for location in locations {
+            minLat = min(minLat, location.latitude)
+            minLng = min(minLng, location.longitude)
+            maxLat = max(maxLat, location.latitude)
+            maxLng = max(maxLng, location.longitude)
+        }
+        return MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: (minLat + maxLat) / 2, longitude: (minLng + maxLng) / 2) , span: MKCoordinateSpan(latitudeDelta: (maxLat - minLat) * 1.4, longitudeDelta: (maxLng - minLng) * 1.4))
+    }
+    
     func hideRunData(hide: Bool) {
         if hide {
             lastRunBGView.isHidden = true
@@ -84,9 +112,11 @@ class BeginRunVC: LocationVC {
     
     @IBAction func lastRunClosedBtnPressed(_ sender: Any) {
         hideRunData(hide: true)
+        centerMapOnUserLocation()
     }
     
     @IBAction func locationCenterBtnPressed(_ sender: Any) {
+        centerMapOnUserLocation()
     }
 }
 
@@ -95,7 +125,6 @@ extension BeginRunVC: CLLocationManagerDelegate {
         if status == .authorizedWhenInUse {
             checkLocationAuthStatus()
             mapView.showsUserLocation = true
-            mapView.userTrackingMode = .follow
         }
     }
     
