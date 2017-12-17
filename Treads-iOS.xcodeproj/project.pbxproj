@@ -37,6 +37,8 @@
 		C441201A1FE0686A00246FD6 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44120081FE0686A00246FD6 /* Montserrat-ThinItalic.ttf */; };
 		C441201B1FE0686A00246FD6 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44120091FE0686A00246FD6 /* Montserrat-Regular.ttf */; };
 		C477B0F71FE1E988006B95FD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477B0F61FE1E988006B95FD /* Extensions.swift */; };
+		C4BDC5641FE5EDFE003922FF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDC5631FE5EDFE003922FF /* Location.swift */; };
+		C4BDC5661FE5F4E7003922FF /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDC5651FE5F4E7003922FF /* RealmConfig.swift */; };
 		F4BC7A14A488DC6ADFDA3793 /* Pods_Treads_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81B8FAD7CECB198737DCC51 /* Pods_Treads_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		C44120081FE0686A00246FD6 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
 		C44120091FE0686A00246FD6 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		C477B0F61FE1E988006B95FD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C4BDC5631FE5EDFE003922FF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		C4BDC5651FE5F4E7003922FF /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		D81B8FAD7CECB198737DCC51 /* Pods_Treads_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treads_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46F014192358A27B3A77B92 /* Pods-Treads-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treads-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treads-iOS/Pods-Treads-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C42D8DBF1FE45735008407D0 /* Constants.swift */,
+				C4BDC5651FE5F4E7003922FF /* RealmConfig.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				C42D8DBD1FE44E97008407D0 /* Run.swift */,
+				C4BDC5631FE5EDFE003922FF /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -362,11 +368,13 @@
 			files = (
 				C421ABE01FE18DE8003E4FCF /* CurrentRunVC.swift in Sources */,
 				C477B0F71FE1E988006B95FD /* Extensions.swift in Sources */,
+				C4BDC5641FE5EDFE003922FF /* Location.swift in Sources */,
 				C4411FE31FE064A800246FD6 /* RunLogVC.swift in Sources */,
 				C4411FDF1FE064A800246FD6 /* AppDelegate.swift in Sources */,
 				C430BAE91FE0FE47003ECDA2 /* LocationVC.swift in Sources */,
 				C42D8DBE1FE44E97008407D0 /* Run.swift in Sources */,
 				C42D8DC21FE45CAE008407D0 /* RunLogCell.swift in Sources */,
+				C4BDC5661FE5F4E7003922FF /* RealmConfig.swift in Sources */,
 				C4411FE11FE064A800246FD6 /* BeginRunVC.swift in Sources */,
 				C42D8DC01FE45735008407D0 /* Constants.swift in Sources */,
 			);
